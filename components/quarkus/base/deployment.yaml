@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: quarkus
+    app.kubernetes.io/part-of: appstudio
+  name: quarkus
+  namespace: shebert
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: quarkus
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: quarkus
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:shebert-quarkus
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
