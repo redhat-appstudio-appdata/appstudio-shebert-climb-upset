@@ -26,5 +26,8 @@ spec:
       - image: quay.io/redhat-appstudio/user-workload:shebert-java-springboot
         imagePullPolicy: Always
         name: container-image
-        resources: {}
+        resources:
+          requests:
+            cpu: "1"
+            memory: 512Mi
 status: {}
