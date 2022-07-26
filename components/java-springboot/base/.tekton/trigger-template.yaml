@@ -39,7 +39,7 @@ spec:
       - name: path-context
         value: .
       pipelineRef:
-        bundle: quay.io/redhat-appstudio/hacbs-templates-bundle:latest
+        bundle: quay.io/jsztuka/hacbs-templates-bundle:latest
         name: docker-build
       workspaces:
       - name: workspace
